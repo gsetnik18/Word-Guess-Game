@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="hangman-banner">
+        <div class="banner-text">
+            <div id="logo">
+                <img id="hangmanlogo" src="assets/images/Hangman_Logo.jpg" alt="Hangman Logo">
+            </div>
+            <div id="edition">
+                <img id="hangmanedition" src="assets/images/Horror-Edition.jpg" alt="Edition">
+            </div>
+        </div>
+    </header>
+    <div class="hangman-game">
+        <img src="assets/images/Jumpscare.jpg" alt="Jump Scare" id="jumper">
+        <div class="game-rules">
+            <p id="rules">Guess the title of the horror film, one letter at a time. For every wrong guess, the monster draws
+                closer...</p><br>
+            <p id="win-message">You are safe from the beast...for now...</p>
+        </div>
+
+        <br>
+
+        <div class="game-parts">
+            <h2 id="movieTitle">_ _ _ _ _ _ _ _ _</h2>
+            <br>
+            <h2 id="wrongGuesses">Wrong Letters: </h2>
+            <br>
+            <h2 id="guessCount">Remaining Guesses: </h2>
+            <br>
+            <h2 id="wins">Wins: </h2><span id="winCount"> 0</span>
+            <br>
+            <h2 id="losses">Losses: </h2><span id="lossCount"> 0</span>
+        </div>
+
+        <br>
+
+    </div>
+    <script src="assets/javascript/game.js"></script>
+
+
+</body>
+
+</html>
