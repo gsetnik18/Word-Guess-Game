@@ -23,6 +23,7 @@ var blanksAndCorrectGuesses = [];
 var wrongGuesses = [];
 var correctCounter = 0;
 var delayReset = 2000;
+var jumpNoise = document.getElementById('jump-noise');
 
 function reset()
 {
@@ -137,17 +138,16 @@ function winLose()
         document.getElementById('lossCount').innerHTML = numOfLosses;
         console.log('You are dead');
         //display jumper image for a few seconds before resetting
-        function showJumper(){
-        var x = document.getElementById("jumper");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
+        document.getElementById('jumper').style.display = "block";
+        setTimeout(function(){
+            document.getElementById('jumper').style.display = "none"}, delayReset
+        )
+        //Play sound while image is visible
+        //Attempted to nest if else function within this else if,
+        //to make the sound play if ('jumper').style.display = "block"
+        jumpNoise.play();
         reset();
     }};
-
 
 startGame();
 
